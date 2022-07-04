@@ -13,7 +13,7 @@ public class StudentConfig {
     CommandLineRunner commandLineRunner(StudentRepository studentRepository) {
         return args -> {
 			Student john = new Student(1L,"John","john@gmail.com",LocalDate.of(2000,1,1));
-            Student mint = new Student(1L,"Mint","Mint@gmail.com",LocalDate.of(1999,1,1));
+            Student mint = new Student(2L,"Mint","Mint@gmail.com",LocalDate.of(1999,1,1));
             studentRepository.saveAll(List.of(john, mint));
         };
     }

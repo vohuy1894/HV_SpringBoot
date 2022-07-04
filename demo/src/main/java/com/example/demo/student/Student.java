@@ -1,6 +1,8 @@
 package com.example.demo.student;
 
 import java.time.LocalDate;
+import java.time.Period;
+
 import javax.persistence.*;
 
 @Entity
@@ -38,7 +40,7 @@ public class Student {
     }
     
     public Integer getAge(){
-        return age;
+        return Period.between(this.dob, LocalDate.now()).getYears();
     }
 
     public void setAge(Integer age){
